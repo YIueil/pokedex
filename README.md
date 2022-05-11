@@ -1,24 +1,8 @@
 # pokedex
 
-## Project setup
-```
-yarn install
-```
+这是一头口袋妖怪图鉴
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 1 技术选型
+vue3+element
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+其他: eslint、babel

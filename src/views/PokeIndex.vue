@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'PokeIndex',
-};
+}
 </script>
 
 <style scoped>

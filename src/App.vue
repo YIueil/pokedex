@@ -8,9 +8,9 @@ import PokeIndex from './views/PokeIndex.vue';
 export default {
   name: 'App',
   components: {
-    PokeIndex,
-  },
-};
+    PokeIndex
+  }
+}
 </script>
 
 <style>

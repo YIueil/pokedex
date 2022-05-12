@@ -1,5 +1,9 @@
 <template>
-  <PokeIndex></PokeIndex>
+  <div>
+    <PokeIndex></PokeIndex>
+    <el-button type="primary">el-button</el-button>
+  </div>
+
 </template>
 
 <script>
@@ -14,7 +18,6 @@ export default {
 </script>
 
 <style>
-/*全局样式配置*/
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

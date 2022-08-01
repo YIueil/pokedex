@@ -1,18 +1,41 @@
 <template>
-  <div class="common-layout">
-    <el-row class="main">
-      <el-col :span="8">
+  <el-space wrap class="main">
+    <el-row>
+      <el-col style="margin: 0" :span="8">
         <div class="img-box">
           {{ pokemon.label }}
-          <img class="img" v-bind:src="require('@/assets/thumbnails/' + pokemon.bid + '.png')"
+          <img class="img" v-bind:src="pData.urls[0]"
                alt="pokemon_icon"/>
         </div>
       </el-col>
-      <el-col :span="16">
-        main
+      <el-col style="margin-left: 10px" :span="14">
+        <el-row class="line --el-box-shadow-dark">
+          <el-col :span="4" class="line-label --el-box-shadow-dark">属性</el-col>
+          <el-col :offset="2" :span="18" class="line-value">{{ pData.basic.category }}</el-col>
+        </el-row>
+        <el-row class="line">
+          <el-col :span="4" class="line-label --el-box-shadow-dark">描述</el-col>
+          <el-col :offset="2" :span="18" class="line-value">{{ pData.story }}</el-col>
+        </el-row>
+        <el-row class="line">
+          <el-col :span="4" class="line-label --el-box-shadow-dark">身高</el-col>
+          <el-col :offset="2" :span="18" class="line-value">{{ pData.basic.height }}</el-col>
+        </el-row>
+        <el-row class="line">
+          <el-col :span="4" class="line-label --el-box-shadow-dark">体重</el-col>
+          <el-col :offset="2" :span="18" class="line-value">{{ pData.basic.weight }}</el-col>
+        </el-row>
+        <el-row class="line">
+          <el-col :span="4" class="line-label --el-box-shadow-dark">特性</el-col>
+          <el-col :offset="2" :span="18" class="line-value">{{ pData.basic.abilities.join(" / ") }}</el-col>
+        </el-row>
+        <el-row class="line">
+          <el-col :span="4" class="line-label --el-box-shadow-dark">蛋组</el-col>
+          <el-col :offset="2" :span="18" class="line-value">{{ pData.basic.gender.join(" / ") }}</el-col>
+        </el-row>
       </el-col>
     </el-row>
-  </div>
+  </el-space>
 </template>
 
 <script>
@@ -25,17 +48,25 @@ export default {
   },
   mounted() {
 
+  },
+  computed: {
+    pData() {
+      const {data} = require("@/assets/data/pokemons/" + this.pokemon.bid + ".js");
+      return data;
+    }
   }
 }
 </script>
 
 <style scoped>
 .main {
-  height: 400px;
+  margin-left: 20px;
 }
+
 .img-box {
   position: relative;
   height: 300px;
+  width: 300px;
   border: 2px dotted rgba(0, 0, 0, 0.5);
   border-top: none;
   border-bottom: none;
@@ -44,11 +75,26 @@ export default {
 }
 
 .img-box .img {
-  position:absolute;
-  height: 100px;
-  flex: 0.3;
-  top:50%;
+  position: absolute;
+  height: 200px;
+  top: 50%;
   left: 50%;
-  transform:translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+}
+
+.line {
+  margin-bottom: 15px;
+}
+
+.line-label {
+  box-shadow: 0 0 6px rgba(0, 0, 0, .12);
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+}
+
+.line-value {
+  box-shadow: 0 0 6px rgba(0, 0, 0, .12);
+  margin-left: 10px;
+  padding: 5px 10px 5px 10px;
 }
 </style>

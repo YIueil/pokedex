@@ -10,6 +10,7 @@ import {
   ElTabs,
   ElTabPane,
   ElEmpty,
+  ElSpace,
   ElRow,
   ElCol
 } from 'element-plus'
@@ -31,4 +32,5 @@ export default (app) => {
   app.use(ElTabs)
   app.use(ElTabPane)
   app.use(ElEmpty)
+  app.use(ElSpace)
 }

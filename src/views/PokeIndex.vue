@@ -31,7 +31,7 @@
           </el-scrollbar>
         </el-aside>
         <el-main style="padding: 0">
-          <el-tabs v-if="currentPokemon" style="height: 100%" type="border-card" class="border-card">
+          <el-tabs v-if="currentPokemon" type="border-card" class="border-card">
             <el-tab-pane label="资料">
               <PokemonProperties :pokemon="currentPokemon"/>
             </el-tab-pane>

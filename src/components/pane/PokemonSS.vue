@@ -1,27 +1,27 @@
 <template>
   <div class="demo-progress">
     HP:
-    <el-progress :percentage="parseInt(ss[0]) / 1.5">
+    <el-progress :percentage="ss[0] / 1.5" :color="customColors">
       {{ ss[0] }}
     </el-progress>
     ATK:
-    <el-progress :percentage="ss[1] / 1.5">
+    <el-progress :percentage="ss[1] / 1.5" :color="customColors">
       {{ ss[1] }}
     </el-progress>
     DEF:
-    <el-progress :percentage="ss[2] / 1.5">
+    <el-progress :percentage="ss[2] / 1.5" :color="customColors">
       {{ ss[2] }}
     </el-progress>
     S_ATK:
-    <el-progress :percentage="ss[3] / 1.5">
+    <el-progress :percentage="ss[3] / 1.5" :color="customColors">
       {{ ss[3] }}
     </el-progress>
     S_DEF:
-    <el-progress :percentage="ss[4] / 1.5">
+    <el-progress :percentage="ss[4] / 1.5" :color="customColors">
       {{ ss[4] }}
     </el-progress>
     SPD:
-    <el-progress :percentage="ss[5] / 1.5">
+    <el-progress :percentage="ss[5] / 1.5" :color="customColors">
       {{ ss[5] }}
     </el-progress>
   </div>
@@ -33,6 +33,17 @@ export default {
   props: {
     pokemon: {
       type: Object
+    }
+  },
+  data() {
+    return {
+      customColors: [
+        {color: '#d4c89f', percentage: 20},
+        {color: '#e6a23c', percentage: 40},
+        {color: '#5cb87a', percentage: 60},
+        {color: '#ea2c2c', percentage: 80},
+        {color: '#7b2ce0', percentage: 100}
+      ]
     }
   },
   computed: {

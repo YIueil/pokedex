@@ -1,14 +1,14 @@
 <template>
   <el-space wrap class="main">
     <el-row>
-      <el-col style="margin: 0" :span="8">
+      <el-col :span="5">
         <div class="img-box">
           {{ pokemon.label }}
           <img class="img" v-bind:src="pData.urls[0]"
                alt="pokemon_icon"/>
         </div>
       </el-col>
-      <el-col style="margin-left: 10px" :span="14">
+      <el-col :offset="4" :span="14">
         <el-row class="line --el-box-shadow-dark">
           <el-col :span="4" class="line-label --el-box-shadow-dark">属性</el-col>
           <el-col :offset="2" :span="18" class="line-value">{{ pData.basic.category }}</el-col>

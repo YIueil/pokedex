@@ -36,7 +36,9 @@
               <PokemonProperties :pokemon="currentPokemon"/>
             </el-tab-pane>
             <el-tab-pane label="技能">技能</el-tab-pane>
-            <el-tab-pane label="种族值">种族值</el-tab-pane>
+            <el-tab-pane label="种族值">
+              <PokemonSS :pokemon="currentPokemon"/>
+            </el-tab-pane>
             <el-tab-pane label="进化树">进化树</el-tab-pane>
             <el-tab-pane label="详情">详情</el-tab-pane>
           </el-tabs>
@@ -52,10 +54,12 @@ import { Search } from '@element-plus/icons-vue';
 import { pokemonIndex } from "@/assets/data/pokemons/indexes";
 import IndexPokemonCard from "@/components/index/IndexPokemonCard";
 import PokemonProperties from "@/components/pane/PokemonProperties";
+import PokemonSS from "@/components/pane/PokemonSS";
 
 export default {
   name: 'PokeIndex',
   components:{
+    PokemonSS,
     PokemonProperties,
     Search,
     IndexPokemonCard

@@ -12,7 +12,8 @@ import {
   ElEmpty,
   ElSpace,
   ElRow,
-  ElCol
+  ElCol,
+  ElProgress
 } from 'element-plus'
 import lang from 'element-plus/lib/locale/lang/zh-cn'
 import {use} from 'element-plus/lib/locale'
@@ -33,4 +34,5 @@ export default (app) => {
   app.use(ElTabPane)
   app.use(ElEmpty)
   app.use(ElSpace)
+  app.use(ElProgress)
 }

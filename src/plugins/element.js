@@ -13,7 +13,8 @@ import {
   ElSpace,
   ElRow,
   ElCol,
-  ElProgress
+  ElProgress,
+  ElTag, ElCard
 } from 'element-plus'
 import lang from 'element-plus/lib/locale/lang/zh-cn'
 import {use} from 'element-plus/lib/locale'
@@ -35,4 +36,6 @@ export default (app) => {
   app.use(ElEmpty)
   app.use(ElSpace)
   app.use(ElProgress)
+  app.use(ElTag)
+  app.use(ElCard)
 }
